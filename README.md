@@ -8,7 +8,7 @@
 - **Muti-size D-Pad supported:** the user can easily change the D-Pad to any size as it won't break the code.
 - **Flexible D-Pad position:** the user doesn't need the ultimate precision as the D-Pad will follow the user's thumb (in the limited area).
 - **Auto D-Pad recenter:** the D-Pad will automatically return to its default positon. The user can sepacify the default position in the editor, there's no need to change this in the code.
-- **Visual Script:** the code is written in Visual Script. Therefore, it's easy to read and understand if someone want to modify it.
+- **Visual Script:** the code is written in Visual Script. Therefore, it's easy to read and understand the code if someone want to modify it.
 
 ## Usage
 Open this demo project. Play with the project. Even parts of the joypad (D-Pad and some buttons) can be used seperately.
