@@ -13,7 +13,7 @@ https://user-images.githubusercontent.com/1403194/163666102-90858095-f24c-4ed4-9
 - **Visual Script:** the code is written in Visual Script. Therefore, it's easy to read and understand the code if someone wants to modify it.
 
 ## Usage
-Open this demo project. Play with the project. Even parts of the joypad (D-Pad and some buttons) can be used seperately.
+Open this demo project. Play with the project. Every parts of the joypad (D-Pad and some buttons) can be used seperately.
 
 ## Made with love. If you love it, buy me a beer 🍺
 
