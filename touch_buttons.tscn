@@ -1,0 +1,82 @@
+[gd_scene load_steps=6 format=3 uid="uid://gwjoq3vcqsni"]
+
+[ext_resource type="Script" uid="uid://cgjvcle4674g" path="res://touch_control_materials/touch_buttons.vs" id="1_bxvxe"]
+[ext_resource type="Texture2D" uid="uid://cja0xaweyls40" path="res://touch_control_materials/plus_button.png" id="1_pw8hk"]
+[ext_resource type="Texture2D" uid="uid://crqssu0d25i6p" path="res://touch_control_materials/plus_button_active.png" id="2_3ybbg"]
+[ext_resource type="Texture2D" uid="uid://c4i6oqp466jj1" path="res://touch_control_materials/minus_button.png" id="3_5l21p"]
+[ext_resource type="Texture2D" uid="uid://1x7xepsv8gd7" path="res://touch_control_materials/minus_button_active.png" id="4_ffsku"]
+
+[node name="TouchButtons" type="BaseButton"]
+_import_path = NodePath("")
+process_mode = 0
+process_priority = 0
+editor_description = ""
+visible = true
+modulate = Color(1, 1, 1, 1)
+self_modulate = Color(1, 1, 1, 1)
+show_behind_parent = false
+top_level = false
+clip_children = false
+light_mask = 1
+texture_filter = 0
+texture_repeat = 0
+material = null
+use_parent_material = false
+clip_contents = false
+minimum_size = Vector2(0, 0)
+layout_direction = 0
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -400.0
+offset_top = -300.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 1
+grow_vertical = 1
+rotation = 0.0
+scale = Vector2(1, 1)
+pivot_offset = Vector2(0, 0)
+size_flags_horizontal = 1
+size_flags_vertical = 1
+size_flags_stretch_ratio = 1.0
+auto_translate = true
+hint_tooltip = ""
+focus_neighbor_left = NodePath("")
+focus_neighbor_top = NodePath("")
+focus_neighbor_right = NodePath("")
+focus_neighbor_bottom = NodePath("")
+focus_next = NodePath("")
+focus_previous = NodePath("")
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+theme = null
+theme_type_variation = &""
+disabled = false
+toggle_mode = false
+shortcut_in_tooltip = true
+button_pressed = false
+action_mode = 1
+button_mask = 1
+keep_pressed_outside = false
+shortcut = null
+button_group = null
+shortcut_context = null
+script = ExtResource( "1_bxvxe" )
+
+[node name="plus" type="TouchScreenButton" parent="."]
+position = Vector2(220, 120)
+scale = Vector2(0.15, 0.15)
+texture_normal = ExtResource( "1_pw8hk" )
+texture_pressed = ExtResource( "2_3ybbg" )
+
+[node name="minus" type="TouchScreenButton" parent="."]
+position = Vector2(70, 119)
+scale = Vector2(0.15, 0.15)
+texture_normal = ExtResource( "3_5l21p" )
+texture_pressed = ExtResource( "4_ffsku" )
+
+[connection signal="pressed" from="plus" to="." method="_on_plus_pressed"]
+[connection signal="pressed" from="minus" to="." method="_on_minus_pressed"]

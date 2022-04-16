@@ -1,0 +1,86 @@
+[gd_scene load_steps=6 format=3 uid="uid://3ww56gmi7h66"]
+
+[ext_resource type="Texture2D" uid="uid://djjmor6xgy5uu" path="res://touch_control_materials/analog_directional_circle.png" id="1_dd88t"]
+[ext_resource type="Texture2D" uid="uid://e8x57phqorru" path="res://touch_control_materials/analog_directional_stick_inactive.png" id="2_sg7hl"]
+[ext_resource type="Texture2D" uid="uid://d37msfk7y370n" path="res://touch_control_materials/analog_directional_stick_active.png" id="3_hgws5"]
+[ext_resource type="Script" uid="uid://bihh8ym1dbjay" path="res://touch_control_materials/AnalogDirectionalStick.vs" id="4_mm8hm"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kawjc"]
+radius = 150.0
+
+[node name="TouchDPad" type="BaseButton"]
+_import_path = NodePath("")
+process_mode = 0
+process_priority = 0
+editor_description = ""
+visible = true
+modulate = Color(1, 1, 1, 1)
+self_modulate = Color(1, 1, 1, 1)
+show_behind_parent = false
+top_level = false
+clip_children = false
+light_mask = 1
+texture_filter = 0
+texture_repeat = 0
+material = null
+use_parent_material = false
+clip_contents = false
+minimum_size = Vector2(0, 0)
+layout_direction = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 0.0
+offset_top = 280.0
+offset_right = 400.0
+offset_bottom = 600.0
+grow_horizontal = 1
+grow_vertical = 0
+rotation = 0.0
+scale = Vector2(1, 1)
+pivot_offset = Vector2(0, 0)
+size_flags_horizontal = 1
+size_flags_vertical = 1
+size_flags_stretch_ratio = 1.0
+auto_translate = true
+hint_tooltip = ""
+focus_neighbor_left = NodePath("")
+focus_neighbor_top = NodePath("")
+focus_neighbor_right = NodePath("")
+focus_neighbor_bottom = NodePath("")
+focus_next = NodePath("")
+focus_previous = NodePath("")
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+theme = null
+theme_type_variation = &""
+disabled = false
+toggle_mode = false
+shortcut_in_tooltip = true
+button_pressed = false
+action_mode = 1
+button_mask = 1
+keep_pressed_outside = false
+shortcut = null
+button_group = null
+shortcut_context = null
+script = null
+__meta__ = {
+"_edit_use_custom_anchors": false
+}
+
+[node name="AnalogDirectionalCircle" type="Sprite2D" parent="."]
+position = Vector2(190, 160)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource( "1_dd88t" )
+
+[node name="AnalogDirectionalStickInactive" type="TouchScreenButton" parent="AnalogDirectionalCircle"]
+texture_normal = ExtResource( "2_sg7hl" )
+texture_pressed = ExtResource( "3_hgws5" )
+shape = SubResource( "CircleShape2D_kawjc" )
+script = ExtResource( "4_mm8hm" )
+
+[connection signal="button_down" from="." to="AnalogDirectionalCircle/AnalogDirectionalStickInactive" method="_on_touch_d_pad_button_down"]
+[connection signal="button_up" from="." to="AnalogDirectionalCircle/AnalogDirectionalStickInactive" method="_on_touch_d_pad_button_up"]

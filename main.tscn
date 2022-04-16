@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://cegfpgpwmw6nv"]
+
+[ext_resource type="PackedScene" uid="uid://3ww56gmi7h66" path="res://touch_dpad.tscn" id="1_ufq36"]
+[ext_resource type="Texture2D" uid="uid://ft0lm6qk8r3y" path="res://icon.png" id="2_hnn2g"]
+[ext_resource type="Script" uid="uid://rkv4inxw8sb1" path="res://DemoCharacter.vs" id="3_bjq6u"]
+[ext_resource type="PackedScene" uid="uid://gwjoq3vcqsni" path="res://touch_buttons.tscn" id="4_8homj"]
+
+[node name="Main" type="Node2D"]
+
+[node name="TouchDPad" parent="." instance=ExtResource( "1_ufq36" )]
+
+[node name="TouchButtons" parent="." instance=ExtResource( "4_8homj" )]
+offset_left = 618.0
+offset_top = 264.0
+offset_right = 1018.0
+offset_bottom = 564.0
+
+[node name="DemoCharacter" type="Sprite2D" parent="."]
+position = Vector2(493, 268)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource( "2_hnn2g" )
+script = ExtResource( "3_bjq6u" )
